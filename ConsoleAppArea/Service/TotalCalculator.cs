@@ -1,28 +1,17 @@
 ﻿using ConsoleAppArea.Models;
+using System.Diagnostics.Metrics;
 
 namespace ConsoleAppArea.Service
 {
     public class TotalCalculator
     {
-        public double TotalArea(object[] arrObjects)
+        public double TotalArea(Shape[] arrShapes)
         {
             double area = 0.0;
-            Rectangle objRectangle;
-            Circle objCircle;
 
-            foreach(var obj in arrObjects)
+            foreach(var arrShape in arrShapes)
             {
-                if(obj is Rectangle)
-                {
-                    objRectangle = (Rectangle)obj;
-                    area += objRectangle.Heigth * objRectangle.Width;
-                }
-                else
-                {
-                    objCircle = (Circle)obj;
-                    area += objCircle.Radius * objCircle.Radius * Math.PI;
-                }
-                
+                area += arrShape.Area();
             }
 
             return area;

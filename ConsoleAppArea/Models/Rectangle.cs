@@ -1,6 +1,8 @@
-﻿namespace ConsoleAppArea.Models
+﻿using ConsoleAppArea.Service;
+
+namespace ConsoleAppArea.Models
 {
-    public class Rectangle
+    public class Rectangle : Shape
     {
         public int Heigth { get; set; }
         public int Width { get; set; }
@@ -9,6 +11,11 @@
         {
             Heigth = heigth;
             Width = width;
+        }
+
+        public override double Area()
+        {
+            return Heigth * Width;
         }
     }
 }

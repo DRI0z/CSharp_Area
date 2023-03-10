@@ -13,15 +13,19 @@ namespace ConsoleAppArea
             Rectangle rectangle1 = new Rectangle(5, 10);
             Rectangle rectangle2 = new Rectangle(4, 5);
 
-            Triangle triangle = new Triangle(5, 5, 5);
+            Triangle triangle1 = new Triangle(5, 5);
+            Triangle triangle2 = new Triangle(8, 2);
 
             Rectangle[] rectangles = { rectangle1, rectangle2 };
 
             Circle[] circles= { circle1, circle2 };
 
+            Triangle[] triangles= { triangle1, triangle2 };
+
             var a = new TotalCalculator();
 
             Console.WriteLine(a.TotalArea(rectangles));
+              
         }
     }
 }
